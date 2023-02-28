@@ -1,0 +1,9 @@
+.socials{
+    display: flex;
+    justify-content: center;
+}
+
+.socials i{
+    padding: 10px;
+    color: #FFFBF9;
+}

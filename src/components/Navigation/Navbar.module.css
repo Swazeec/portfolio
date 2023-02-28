@@ -1,0 +1,25 @@
+.nav{
+    text-align: center;
+}
+
+.nav ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.nav li{
+    padding: 1.5rem;
+}
+.navlink a{
+    color: #FFFBF9;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.navlink a:hover,
+.navlink a:active,
+.navlink a.active{
+    font-weight: bold;
+}
+

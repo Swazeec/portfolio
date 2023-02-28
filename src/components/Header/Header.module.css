@@ -1,0 +1,43 @@
+.header{
+    background-color: #16697A;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .logo>img {
+    height: 60px;
+  }
+
+.close{
+  cursor: pointer;
+  color: #FFFBF9;
+  font-size: 1.5em;
+  align-self: end;
+}
+
+
+  @media screen and (min-width: 992px) {
+
+    .header{
+      height: 100vh;
+      flex-direction: column;
+
+    }
+    .logo{
+        text-align: center;
+      }
+    .logo>img {
+        max-width: 240px;
+        width: 75%;
+        height: auto;
+      }
+    .picture>img{
+      width: 180px;
+      margin: 20px;
+      border: 4px solid #000000;
+      border-radius: 50%;
+    }
+  }
