@@ -1,11 +1,13 @@
+
 .App {
   text-align: center;
 }
 
 #root{
-  height: 100vh;
+  min-height: 100vh;
   background-color: #FFFBF9;
 }
+
 
 
 .row, .col {
@@ -19,15 +21,33 @@ h2 {
   text-transform: uppercase;
   border-bottom: 2px solid #AB911D;
   padding-bottom: 10px;
+  margin-bottom: 20px !important;
 }
 
 h3 {
   color: #65255D;
+  font-size: 1.1em !important;
 }
 
+p {
+  font-family: 'Roboto';
+}
+
+ul{
+  /* list-style:none; */
+  list-style-image: url('./assets/code.svg') ;
+}
 
 @media screen and (min-width: 992px) {
   #root {
+    height: 100vh;
     display: flex;
+  }
+
+  .scroll {
+    height: 100vh;
+    overflow-y: auto;
+    /* border-top: #FFFBF9 solid 30px; */
+    /* border-bottom: #FFFBF9 solid 30px; */
   }
 }
