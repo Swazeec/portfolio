@@ -37,6 +37,10 @@ ul{
   /* list-style:none; */
   list-style-image: url('./assets/code.svg') ;
 }
+.card {
+  border: dotted 2px #65255D !important;
+  
+}
 
 @media screen and (min-width: 992px) {
   #root {
