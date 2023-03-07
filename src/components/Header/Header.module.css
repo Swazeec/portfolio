@@ -30,7 +30,7 @@
         text-align: center;
       }
     .logo>img {
-        max-width: 240px;
+        /* max-width: 240px; */
         width: 75%;
         height: auto;
       }
