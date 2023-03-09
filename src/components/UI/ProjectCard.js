@@ -8,7 +8,7 @@ const ProjectCard = props => {
                     <Card.Body>
                         <h3><i className="bi bi-code"></i> {props.title}</h3>
                         <Card.Img src={props.image}/>
-                        <Card.Text  className="text-center">{props.tech}</Card.Text>
+                        <Card.Text  className="text-center tech">{props.tech}</Card.Text>
                         <div className="text-center">
                             <Card.Link href={props.github} target="blank"><i className="bi bi-github"></i></Card.Link>
                             {props.website && <Card.Link href={props.website} target="blank"><i className="bi bi-link-45deg"></i></Card.Link>}

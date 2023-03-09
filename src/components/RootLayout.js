@@ -23,7 +23,7 @@ const RootLayout = props => {
             <Col xs={12} lg={3} className='p-0'>
                 {(screenWidth >= 992) ? <Header/> : <HeaderMobile/>}
             </Col>
-            <Col xs={12} lg={9} className='p-5 scroll'>
+            <Col xs={12} lg={9} className='py-5 px-4 px-md-5 scroll'>
                 <main className="px-lg-5 pt-lg-5">
                     <Outlet/>
                 </main>
