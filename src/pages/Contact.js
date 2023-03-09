@@ -1,5 +1,11 @@
+import Section from "../components/UI/Section"
+
 const Contact = () =>{
-    return <h2>Contact</h2>
+    return (
+        <Section title='Contact'>
+            
+        </Section>
+    )
 }
 
 export default Contact
