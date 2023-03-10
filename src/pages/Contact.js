@@ -67,7 +67,7 @@ const Contact = () =>{
         <Section title='Contact'>
             {error && <div className='text-center text-danger'>{error}</div>}
             {error === true && <div className='text-center text-success'>Message envoyé avec succès !</div>}
-            <form className='d-flex flex-column py-5 px-md-5' ref={form} onSubmit={sendEmail}>
+            <form className='d-flex flex-column px-md-5 contactForm' ref={form} onSubmit={sendEmail}>
                 <div className='mb-4 mt-1 d-flex flex-column'>
                     <label>Nom</label>
                     <input type="text" name="user_name" value={enteredName} onChange={nameInputChange} onBlur={nameInputBlur} />
@@ -83,7 +83,7 @@ const Contact = () =>{
                     <textarea name="message" value={enteredMessage} onChange={messageInputChange} onBlur={messageInputBlur}/>
                     {messageHasError && <p className='text-danger fst-italic'> Merci d'entrer un message valide</p>}
                 </div>
-                <input className='mb-4 mt-1' type="submit" value="Envoyer" disabled={!formIsValid}/>
+                <input className='submitBtn' type="submit" value="Envoyer" disabled={!formIsValid}/>
             </form>
         </Section>
     )

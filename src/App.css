@@ -46,6 +46,31 @@ ul{
   font-size: 0.9em ;
 }
 
+.submitBtn{
+  background-color: #16697A;
+  color: #FFFBF9;
+  padding: 8px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 15px;
+}
+
+.submitBtn:disabled{
+  background-color: grey;
+}
+
+@media screen and (min-height:600px) {
+ .contactForm{
+  margin-top: 50px;
+ } 
+}
+
+@media screen and (min-height:760px) {
+  .contactForm{
+   margin-top: 100px;
+  } 
+ }
+
 @media screen and (min-width: 992px) {
   #root {
     height: 100vh;
@@ -57,5 +82,10 @@ ul{
     overflow-y: auto;
     /* border-top: #FFFBF9 solid 30px; */
     /* border-bottom: #FFFBF9 solid 30px; */
+  }
+
+  .submitBtn{
+    width: 300px;
+    align-self: center;
   }
 }
