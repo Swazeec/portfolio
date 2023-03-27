@@ -7,17 +7,17 @@ const ListItem = props => {
         showDescription ? setShowDescription(false) : setShowDescription(true)
     }
 
-
-    let chevron = !props.description ? '': showDescription ? <span>  <i className="bi bi-chevron-compact-up"></i></span> : <span>  <i className="bi bi-chevron-compact-down"></i></span>
+    let details = !props.description ? '': showDescription ? <><i className="bi bi-dash-circle"></i> Réduire</>: <><i className="bi bi-plus-circle"></i> En savoir plus</>
 
     let h3Classes = props.dates ? 'mb-0' : ''
-    let pClasses = props.dates ? 'text-secondary mb-1' : ''
+    let subtitleClasses = props.dates ? 'text-secondary mb-1' : props.description ? 'mb-1' : ''
 
     return (
        <li>
-            <h3 className={h3Classes} onClick={onClickHandler}>{props.title}{chevron}</h3>
-            <p className={pClasses}>{props.subtitle}</p>
-            {props.dates && <p>{props.dates}</p>}
+            <h3 className={h3Classes} >{props.title}</h3>
+            <p className={subtitleClasses}>{props.subtitle}</p>
+            {props.dates && <p className="mb-0">{props.dates}</p>}
+            {props.description && <p className="detail" onClick={onClickHandler}>{details}</p>}
             {props.description && showDescription && <ul className="mb-4 descList">{props.description.map(item => <li key={props.description.indexOf(item)}>{item}</li>)}</ul>}
        </li>
     )

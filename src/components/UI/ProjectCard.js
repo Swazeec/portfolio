@@ -10,8 +10,8 @@ const ProjectCard = props => {
                         <Card.Img src={props.image}/>
                         <Card.Text  className="text-center tech">{props.tech}</Card.Text>
                         <div className="text-center">
-                            <Card.Link href={props.github} target="blank"><i className="bi bi-github"></i></Card.Link>
-                            {props.website && <Card.Link href={props.website} target="blank"><i className="bi bi-link-45deg"></i></Card.Link>}
+                            <Card.Link href={props.github} target="blank"><i className="bi bi-github link"></i></Card.Link>
+                            {props.website && <Card.Link href={props.website} target="blank"><i className="bi bi-link-45deg link"></i></Card.Link>}
                         </div>
                     </Card.Body>
                 </Card>

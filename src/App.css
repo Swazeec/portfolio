@@ -8,8 +8,15 @@
   background-color: #FFFBF9;
 }
 
+.detail{
+  color: #16697A;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-
+.link{
+  color: #16697A;
+}
 .row, .col {
   padding: 0 !important;
   margin: 0 !important;
@@ -19,13 +26,13 @@ h2 {
   font-family: 'Poppins';
   color: #16697A;
   text-transform: uppercase;
-  border-bottom: 2px solid #ab911d;
+  border-bottom: 2px solid rgb(171, 145, 29);
   padding-bottom: 10px;
   margin-bottom: 20px !important;
 }
 
 h3 {
-  color: #65255D;
+  color: rgb(101, 37, 93);
   font-size: 1.1em !important;
 }
 
