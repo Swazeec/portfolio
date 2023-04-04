@@ -2,6 +2,7 @@ import { Row } from "react-bootstrap"
 
 import ProjectCard from "../components/UI/ProjectCard"
 
+import portfolio from '../assets/projectsPictures/portfolio.jpg'
 import countryQuiz from '../assets/projectsPictures/countryQuiz.jpg'
 import adviceGen from '../assets/projectsPictures/adviceGenerator.jpg'
 import timeTrack from '../assets/projectsPictures/timeTrackingBoard.jpg'
@@ -13,6 +14,7 @@ import Section from "../components/UI/Section"
 const Projects = () =>{
     return <Section title="Projets">
         <Row className="p-0 m-0 mt-5">
+            <ProjectCard title='Portfolio' image={portfolio} tech='React / HTML / CSS / BS / EmailJS' github='https://github.com/Swazeec/portfolio' website='https://www.soizicvenel.rocks/'/>
             <ProjectCard title='Quiz App' image={countryQuiz} tech='React / HTML / CSS / BS / API' github='https://github.com/Swazeec/quizApp' website='https://quiz-countries.netlify.app'/>
             <ProjectCard title='Advice Generator' image={adviceGen} tech='React / HTML / CSS / API' github='https://github.com/Swazeec/advicegenerator' website='https://small-advice-generator.netlify.app'/>
             <ProjectCard title='Time Tracking App' image={timeTrack} tech='React / HTML / CSS' github='https://github.com/Swazeec/timeTrackingDashboard' website='https://rainbow-valkyrie.netlify.app/'/>
