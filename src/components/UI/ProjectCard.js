@@ -7,7 +7,7 @@ const ProjectCard = props => {
                 <Card className="h-100">
                     <Card.Body>
                         <h3><i className="bi bi-code"></i> {props.title}</h3>
-                        <Card.Img src={props.image}/>
+                        <Card.Img src={props.image} alt={props.title}/>
                         <Card.Text  className="text-center tech">{props.tech}</Card.Text>
                         <div className="text-center">
                             <Card.Link href={props.github} target="blank"><i className="bi bi-github link"></i></Card.Link>

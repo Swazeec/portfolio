@@ -12,15 +12,22 @@ import diceGame from '../assets/projectsPictures/diceGame.jpg'
 import Section from "../components/UI/Section"
 
 const Projects = () =>{
+
+    const myProjects = [
+        {id:'p1' , title:'Portfolio', image:portfolio, tech: 'React / HTML / CSS / BS / EmailJS', github: 'https://github.com/Swazeec/portfolio', website: 'https://www.soizicvenel.rocks'},
+        {id:'p2' , title:'Quiz App', image:countryQuiz, tech: 'React / HTML / CSS / BS / API', github: 'https://github.com/Swazeec/quizApp', website: 'https://quiz-countries.netlify.app'},
+        {id:'p3' , title:'Advice Generator', image:adviceGen, tech: 'React / HTML / CSS / API', github: 'https://github.com/Swazeec/advicegenerator', website: 'https://small-advice-generator.netlify.app'},
+        {id:'p4' , title:'Time Tracking App', image:timeTrack, tech: 'React / HTML / CSS', github: 'https://github.com/Swazeec/timeTrackingDashboard', website: 'https://rainbow-valkyrie.netlify.app'},
+        {id:'p5' , title:'Pragma ToDo App', image:pragma, tech: 'PHP / POO / MVC / MySQL', github: 'https://github.com/Swazeec/pragma', website: ''},
+        {id:'p6' , title:'Hypnos Hotel Group', image:hypnos, tech: 'PHP / MySQL / JS / AJAX / S3', github: 'https://github.com/Swazeec/hypnosHotelGroup', website: ''},
+        {id:'p7' , title:'Dice Game', image:diceGame, tech: 'HTML / CSS / BS / JS', github: 'https://github.com/Swazeec/Venel-Soizic-javascript-dice-game', website: 'https://svenel-dice-game.netlify.app'},
+    ]
+
+    const content = myProjects.map(item => <ProjectCard key={item.id} title={item.title} image={item.image} tech={item.tech} github={item.tech} website={item.website}/> )
+
     return <Section title="Projets">
         <Row className="p-0 m-0 mt-5">
-            <ProjectCard title='Portfolio' image={portfolio} tech='React / HTML / CSS / BS / EmailJS' github='https://github.com/Swazeec/portfolio' website='https://www.soizicvenel.rocks/'/>
-            <ProjectCard title='Quiz App' image={countryQuiz} tech='React / HTML / CSS / BS / API' github='https://github.com/Swazeec/quizApp' website='https://quiz-countries.netlify.app'/>
-            <ProjectCard title='Advice Generator' image={adviceGen} tech='React / HTML / CSS / API' github='https://github.com/Swazeec/advicegenerator' website='https://small-advice-generator.netlify.app'/>
-            <ProjectCard title='Time Tracking App' image={timeTrack} tech='React / HTML / CSS' github='https://github.com/Swazeec/timeTrackingDashboard' website='https://rainbow-valkyrie.netlify.app/'/>
-            <ProjectCard title='Pragma ToDo App' image={pragma} tech='PHP / POO / MVC / MySQL' github='https://github.com/Swazeec/pragma' />
-            <ProjectCard title='Hypnos Hotel Group' image={hypnos} tech='PHP / MySQL / JS / AJAX' github='https://github.com/Swazeec/hypnosHotelGroup' />
-            <ProjectCard title='Dice Game' image={diceGame} tech='HTML / CSS / BS / JS' github='https://github.com/Swazeec/Venel-Soizic-javascript-dice-game' website='https://svenel-dice-game.netlify.app/'/>
+            {content}
         </Row>
     </Section>
 }
