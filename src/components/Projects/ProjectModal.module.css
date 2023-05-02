@@ -1,0 +1,48 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+    position: fixed;
+    margin-top: auto;
+    left: 10%;
+    width: 80%;
+    z-index: 11;
+    max-height: 95%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.links, .links:hover{
+    background-color: #AB911D ;
+    color: #FFFBF9;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration: thin;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.modalDesc {
+    padding-top: 20px;
+}
+
+@media (min-width : 768px) {
+
+    .modalPict{
+        width: 50%;
+        max-width: 624px;
+    }
+    .modalDesc {
+        width: 50%;
+        padding-inline: 20px;
+    }
+}

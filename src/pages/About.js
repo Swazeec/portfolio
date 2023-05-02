@@ -1,4 +1,4 @@
-import ListItem from "../components/UI/ListItem"
+import ListItem from "../components/About/ListItem"
 import Section from "../components/UI/Section"
 
 

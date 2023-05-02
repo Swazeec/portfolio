@@ -1,13 +1,8 @@
-import { useState } from "react"
+import useShowDetails from "../../hooks/useShowDetails"
 
 const ListItem = props => {
 
-    const [showDescription, setShowDescription] = useState(false)
-    const onClickHandler = ()=> {
-        showDescription ? setShowDescription(false) : setShowDescription(true)
-    }
-
-    let details = !props.description ? '': showDescription ? <><i className="bi bi-dash-circle"></i> Réduire</>: <><i className="bi bi-plus-circle"></i> En savoir plus</>
+    const {onClickHandler, showDescription, details} = useShowDetails()
 
     let h3Classes = props.dates ? 'mb-0' : ''
     let subtitleClasses = props.dates ? 'text-secondary mb-1' : props.description ? 'mb-1' : ''

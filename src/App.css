@@ -72,6 +72,13 @@ ul{
   background-color: grey;
 }
 
+#overlay-root{
+  position:absolute;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (min-height:600px) {
  .contactForm{
   margin-top: 50px;
