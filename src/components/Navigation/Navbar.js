@@ -16,8 +16,7 @@ const Navbar = props =>{
                     <NavLink to='/contact' onClick={props.onClick} className={({isActive})=>isActive? classes.active : undefined} end>contact</NavLink>
                 </li>
                 <li className={classes.navlink}>
-                    {/* <NavLink to='../../assets/Venel_Soizic-CV-dev-web.pdf'>CV</NavLink> */}
-                    <a href='../../assets/Venel_Soizic-CV-dev-web.pdf' download>cv</a>
+                    <a href='../../assets/Venel_Soizic-CV-dev_web.pdf' download>cv</a>
                 </li>
             </ul>
         </nav>
