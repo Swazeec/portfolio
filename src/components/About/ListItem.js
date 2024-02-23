@@ -12,6 +12,7 @@ const ListItem = props => {
             <h3 className={h3Classes} >{props.title}</h3>
             <p className={subtitleClasses}>{props.subtitle}</p>
             {props.dates && <p className="mb-0">{props.dates}</p>}
+            {props.intro && <p className="intro">{props.intro}</p>}
             {props.description && <p className="detail" onClick={onClickHandler}>{details}</p>}
             {props.description && showDescription && <ul className="mb-4 descList">{props.description.map(item => <li key={props.description.indexOf(item)}>{item}</li>)}</ul>}
        </li>
