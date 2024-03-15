@@ -2,6 +2,7 @@ import { Row } from "react-bootstrap"
 
 import ProjectCard from "../components/Projects/ProjectCard"
 
+import nebulia from '../assets/projectsPictures/nebulia.jpg'
 import portfolio from '../assets/projectsPictures/portfolio.jpg'
 import countryQuiz from '../assets/projectsPictures/countryQuiz.jpg'
 import adviceGen from '../assets/projectsPictures/adviceGenerator.jpg'
@@ -15,10 +16,25 @@ const Projects = () =>{
 
     const myProjects = [
         {
+            id:'p8' , 
+            title:'Nebul\'IA', 
+            projectDate:'2023',
+            image:nebulia, 
+            tech: 'Ionic / ReactTS', 
+            github: '', 
+            website: 'https://www.nebulia.tech', 
+            description:[
+                'Réalisation d\'un site vitrine pour l\'entreprise dans laquelle je travaillais.', 
+                'Élaboration de la charte graphique et maquettage sur Figma.',
+                'Utilisation de Ionic avec React Typescript, gestion Dark/Light mode, effet parallax géré en CSS : le logo passe derrière les montagnes au scroll.', 
+            ]
+        },
+        {
             id:'p1' , 
             title:'Portfolio', 
+            projectDate:'2023',
             image:portfolio, 
-            tech: 'React / HTML / CSS / BS / EmailJS', 
+            tech: 'ReactJS / CSS / Bootstrap', 
             github: 'https://github.com/Swazeec/portfolio', 
             website: 'https://www.soizicvenel.rocks', 
             description:[
@@ -30,8 +46,9 @@ const Projects = () =>{
         {
             id:'p2' , 
             title:'Quiz App', 
+            projectDate:'2023',
             image:countryQuiz, 
-            tech: 'React / HTML / CSS / BS / API', 
+            tech: 'React / CSS / Bootstrap / API', 
             github: 'https://github.com/Swazeec/quizApp', 
             website: 'https://quiz-countries.netlify.app', 
             description:[
@@ -45,8 +62,9 @@ const Projects = () =>{
         {
             id:'p3' , 
             title:'Advice Generator', 
+            projectDate:'2023',
             image:adviceGen, 
-            tech: 'React / HTML / CSS / API', 
+            tech: 'React / CSS / API', 
             github: 'https://github.com/Swazeec/advicegenerator', 
             website: 'https://small-advice-generator.netlify.app', 
             description:[
@@ -59,9 +77,10 @@ const Projects = () =>{
         },
         {
             id:'p4' , 
-            title:'Time Tracking App', 
+            title:'Time Tracker', 
+            projectDate:'2023',
             image:timeTrack, 
-            tech: 'React / HTML / CSS', 
+            tech: 'React / CSS', 
             github: 'https://github.com/Swazeec/timeTrackingDashboard', 
             website: 'https://rainbow-valkyrie.netlify.app', 
             description:[
@@ -73,7 +92,8 @@ const Projects = () =>{
         },
         {
             id:'p5' , 
-            title:'Pragma ToDo App', 
+            title:'ToDo App', 
+            projectDate:'2022',
             image:pragma, 
             tech: 'PHP / POO / MVC / MySQL', 
             github: 'https://github.com/Swazeec/pragma', 
@@ -90,28 +110,32 @@ const Projects = () =>{
         {
             id:'p6' , 
             title:'Hypnos Hotel Group', 
+            projectDate:'2022',
             image:hypnos, 
-            tech: 'PHP / MySQL / JS / AJAX / S3', 
+            tech: 'PHP / MySQL / JS / HTML / CSS', 
             github: 'https://github.com/Swazeec/hypnosHotelGroup', 
             website: '', 
             description:[
+                "Projet réalisé pour le passage du titre professionnel de Développeur Web et Web Mobile.",
                 "Hypnos est un groupe hôtelier de luxe (fictif) souhaitant gérer en interne les services de présentation et de réservation de chambre. C'est pourquoi nous avons lancé le projet Hypnos Hotel Group avec la réalisation d'une application web et web mobile. Grâce à ce site, tout le monde peut découvrir l'ensemble de l'offre Hypnos et vérifier les disponibilités de chaque chambre. La réservation étant destinée aux clients connectés, les visiteurs ont la possibilité de s'incrire et se connecter. Concernant la gestion : un espace professionnel est réservé à l'administrateur (qui gère ce qui est relatif aux hôtels) et aux managers (qui gèrent chacun leur hôtel et les suites associées.)", 
                 "Maquettage : diagrammes, wireframes, maquettes.",
-                "Front : HTML, CSS, BS, JS, Ajax.",
+                "Front : HTML, CSS, Bootstrap, JS, Ajax.",
                 "Tests : Mocha.",
                 "Back : PHP procédural. BDD : MySql, gérée via JawsDB sur Heroku. Dialogue BDD / back : PDO.", 
                 "Déploiement : Heroku. Bucket S3.",
-                "Source : projet ECF de fin de formation, Studi"
+                "Source : Projet d'école, Studi"
             ]
         },
         {
             id:'p7' , 
             title:'Dice Game', 
+            projectDate:'2021',
             image:diceGame, 
-            tech: 'HTML / CSS / BS / JS', 
+            tech: 'HTML / CSS / Bootstrap / JS', 
             github: 'https://github.com/Swazeec/Venel-Soizic-javascript-dice-game', 
             website: 'https://svenel-dice-game.netlify.app', 
             description:[
+                "Projet réalisé au tout début de ma reconversion professionnelle, pour mettre en pratique mes connaissances en javascript.",
                 "Jeu de dé. Le but du jeu est simple : arriver à 100 points avant son adversaire ! Le dé peut être lancé autant de fois que souhaité par le joueur actif. Tant que le résultat est différent de 1, le joueur cumule des points dans un score temporaire. Il peut ajouter son score temporaire à son score global à tout moment, et ainsi laisser jouer son adversaire. S'il fait 1, il perd son score temporaire et c'est au joueur suivant de tenter sa chance.",
                 "Utilisation de HTML, CSS, Bootstrap, Javascript vanilla",
                 "Déploiement : Netlify.",
@@ -120,7 +144,7 @@ const Projects = () =>{
         },
     ]
 
-    const content = myProjects.map(item => <ProjectCard key={item.id} id={item.id} title={item.title} image={item.image} tech={item.tech} github={item.github} website={item.website} description={item.description}/> )
+    const content = myProjects.map(item => <ProjectCard key={item.id} id={item.id} title={item.title} projectDate={item.projectDate} image={item.image} tech={item.tech} github={item.github} website={item.website} description={item.description}/> )
 
     return <Section title="Projets">
         <Row className="p-0 m-0 mt-5">

@@ -12,7 +12,7 @@ const ModalOverlay = props => {
         <Card className={classes.modal} >
             <Card.Body>
                 <div className='d-flex justify-content-between mb-2 mb-lg-3'>
-                    <h3><i className="bi bi-code"></i> {props.title}</h3>
+                    <h3><i className="bi bi-code"></i> {props.title} <span style={{fontSize:'12px'}}> ({props.projectDate})</span></h3>
                     <div className={classes.close} onClick={props.onClose}>
                         <i className="bi bi-x-lg"></i>
                     </div>
@@ -22,7 +22,7 @@ const ModalOverlay = props => {
                     <div className={classes.modalDesc}>
                         {props.description.map(item => <Card.Text key={props.description.indexOf(item)}>{item}</Card.Text>)}
                         <div className="text-center mt-5">
-                            <Card.Link className={classes.links} href={props.github} target="blank">Github</Card.Link>
+                            {props.github && <Card.Link className={classes.links} href={props.github} target="blank">Github</Card.Link>}
                             {props.website && <Card.Link className={classes.links} href={props.website} target="blank">Website</Card.Link>}
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const ProjectModal = props => {
                 document.getElementById("backdrop-root")
             )}
             {ReactDOM.createPortal(
-                <ModalOverlay title={props.title} image={props.image} description={props.description} tech={props.tech} github={props.github} website={props.website} onClose={props.onClose} />,
+                <ModalOverlay title={props.title} image={props.image} projectDate={props.projectDate} description={props.description} tech={props.tech} github={props.github} website={props.website} onClose={props.onClose} />,
                 document.getElementById("overlay-root")
             )}
         </>
