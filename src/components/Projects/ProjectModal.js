@@ -17,7 +17,7 @@ const ModalOverlay = props => {
                         <i className="bi bi-x-lg"></i>
                     </div>
                 </div>
-                <div className='d-md-flex align-items-center'>
+                <div className='d-md-flex align-items-start'>
                     <Card.Img className={classes.modalPict} src={props.image} alt={props.title}/>
                     <div className={classes.modalDesc}>
                         {props.description.map(item => <Card.Text key={props.description.indexOf(item)}>{item}</Card.Text>)}
